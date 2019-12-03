@@ -6,22 +6,6 @@ import styled from "@alethio/explorer-ui/lib/styled-components";
 import { DashboardPageSlotType } from "./dashboardPage";
 import { DashboardContentCenter } from "app/shared/page/dashboard/DashboardContentCenter";
 import { Title } from "app/shared/page/dashboard/Title";
-import { SubTitle } from "app/shared/page/dashboard/SubTitle";
-
-const GithubLink = styled.a`
-	color: ${({theme}) => theme.colors.base.accent.color};
-    opacity: 1;
-    transition: opacity linear 100ms;
-    text-decoration: none;
-
-    &:hover {
-        opacity: 0.8;
-    }
-
-    &:visited {
-        color: ${({theme}) => theme.colors.base.accent.color};
-    }
-`;
 
 /** Mobile padding wrapper */
 const ModuleWrapper = styled.div`
@@ -41,13 +25,6 @@ export class DashboardPageTemplate extends React.Component<IDashboardPageTemplat
                 <Content>
                     <DashboardContentCenter>
                         <Title>{ tr.get("dashboardView.title") }</Title>
-                        <SubTitle>{ tr.get("dashboardView.subTitle") }
-                            <GithubLink href="https://github.com/Alethio/ethereum-lite-explorer"
-                                target="_blank"
-                            >
-                                {tr.get("dashboardView.github")}
-                            </GithubLink>
-                        </SubTitle>
                         <ModuleWrapper>
                         { slots[DashboardPageSlotType.Content] }
                         </ModuleWrapper>

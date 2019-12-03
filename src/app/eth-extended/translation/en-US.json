@@ -50,7 +50,7 @@
     "general.grid.footer.norowsavailable.label": "These are not the droids you are looking for",
 
     "dashboardView.title": "Welcome to Alethio",
-    "dashboardView.subTitle": "The Ethereum Data Analytics Platform",
+    "dashboardView.subTitle": "The Smilo Data Analytics Platform",
     "dashboardView.pendingChart.title.label": "Mined transactions average time in pool",
     "dashboardView.pendingChart.tooltip.txs.label": "%d in pool",
     "dashboardView.pendingPool.size.label": "Pending pool size",

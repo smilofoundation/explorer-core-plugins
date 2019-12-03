@@ -30,8 +30,8 @@
 
     "toolbar.ethstats.help": "Check the realtime usage, performance and overall state of the network, with our Ethstats Network Monitor.",
     "toolbar.api.help": "Get access to synthesized, indexed data in real-time with Alethio API, our powerful data model with interlinked, aggregated responses. Developed in line with best practices and standards by <a href=\"https://ethon.consensys.net/\" rel=\"noopener noreferrer\">EthOn</a> and <a href=\"https://jsonapi.org/\" rel=\"noopener noreferrer\">JSON:API</a>",
-    "toolbar.monitoring.help": "Monitor and receive realtime alerts for any account or smart contract on the Ethereum network, with Alethio Monitoring.",
-    "toolbar.reports.help": "Create structured, semantic Ethereum data sets tailored to your business & research needs, using Alethio's Ethereum Blockchain Reports",
+    "toolbar.monitoring.help": "Monitor and receive realtime alerts for any account or smart contract on the Smilo network.",
+    "toolbar.reports.help": "Create structured, semantic Smilo data sets tailored to your business & research needs, using Smilo Blockchain Reports",
     "toolbar.feedback.help": "We’d love to hear back from you! Send us your feedback and questions, to make your Alethio experience better and better. To make sure you can access our feedback form, please turn off your ad blockers first.",
     "toolbar.company.help": "Find out more about who we are and what we’re here to build, on our company website.",
 
