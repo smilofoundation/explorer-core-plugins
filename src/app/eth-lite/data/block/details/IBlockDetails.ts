@@ -18,7 +18,7 @@ export interface IBlockDetails extends IBlockCommonDetails {
     gasUsed: BigNumber;
     gasLimit: BigNumber;
     difficulty: BigNumber;
-    extraData: string;
+    extraData: any;
     logsBloom: string;
     mixHash?: string;
     /** Hashes of uncles */

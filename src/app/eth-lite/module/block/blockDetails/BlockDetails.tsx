@@ -5,7 +5,7 @@ import { Label } from "@alethio/ui/lib/data/Label";
 import { NumberBox } from "@alethio/ui/lib/data/box/NumberBox";
 import { GasUsedValueBox } from "@alethio/ui/lib/data/box/GasUsedValueBox";
 import { DifficultyBox } from "@alethio/ui/lib/data/box/DifficultyBox";
-import { DecodedHexData } from "@alethio/ui/lib/data/hex/DecodedHexData";
+// import { DecodedHexData } from "@alethio/ui/lib/data/hex/DecodedHexData";
 import { HexData } from "@alethio/ui/lib/data/hex/HexData";
 import { HashValueBox } from "@alethio/ui/lib/data/box/HashValueBox";
 import { LayoutSection } from "@alethio/ui/lib/layout/content/LayoutSection";
@@ -133,13 +133,41 @@ export class BlockDetails extends React.PureComponent<IBlockDetailsProps> {
                         <DifficultyBox value={block.difficulty} locale={locale} />
                     </LayoutRowItem>
                 </LayoutRow>
-                { slots && slots[BlockDetailsSlotType.ExtraData] ||
+
+                { slots && slots[BlockDetailsSlotType.ExtraData] && block.extraData.fullnodes ||
                 <LayoutRow>
-                    <LayoutRowItem autoHeight>
-                        <Label>{tr.get("blockView.content.extraData.label")}</Label>
-                        <DecodedHexData data={block.extraData} />
+                    <LayoutRowItem fullRow autoHeight>
+                        <Label>FULLNODES</Label>
+                        count:{block.extraData.fullnodes.length}
+                        {block.extraData.fullnodes.map((addr: any, idx: any) => (
+                            <UncleHashBox key={addr} linkTo={`page://aleth.io/account?accountHash=${addr}`}>
+                                {addr}
+                            </UncleHashBox>
+                        ))}
                     </LayoutRowItem>
-                </LayoutRow> }
+                </LayoutRow>
+                }
+                { slots && slots[BlockDetailsSlotType.ExtraData] && block.extraData.seal ||
+                <LayoutRow>
+                    <LayoutRowItem fullRow autoHeight>
+                        <Label>Seal</Label>
+                        <HashValueBox>{block.extraData.seal}</HashValueBox>
+                    </LayoutRowItem>
+                </LayoutRow>
+                }
+                { slots && slots[BlockDetailsSlotType.ExtraData] && block.extraData.committedSeals ||
+                <LayoutRow>
+                    <LayoutRowItem fullRow autoHeight>
+                        <Label>Committed Seals</Label>
+                        count:{block.extraData.committedSeals.length}
+                        {block.extraData.committedSeals.map((seal: any, idx: any) => (
+                            <UncleHashBox key={seal}>
+                                {seal}
+                            </UncleHashBox>
+                        ))}
+                    </LayoutRowItem>
+                </LayoutRow>
+                }
                 { block.mixHash ?
                 <LayoutRow minWidth={760}>
                     <LayoutRowItem>
